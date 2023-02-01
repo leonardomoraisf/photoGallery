@@ -38,7 +38,7 @@ If you want to test the project, what you need is listed below:
 
 ### Prerequisites
 
-To run this project in the development mode, you'll need to have a basic environment to run a ReactJs project, that can be found [here](https://nodejs.org/en/).
+To run this project, you'll need to have a basic environment to run a ReactJs project, that can be found [here](https://nodejs.org/en/).
 
 Also, you'll need to the server running locally on your machine with the mock data.
 
