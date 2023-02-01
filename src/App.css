@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #ecebec;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  border-bottom: 3px solid #bdbdbd;
+  padding: 30px;
+  margin-bottom: 60px;
+}
+.header h1 {
+  font-size: 30px;
+}
+.header .file {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  height: 2.5rem;
+}
+.header .file input[type="file"] {
+  min-width: 14rem;
+  margin: 0;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.header .file-custom {
+  text-align: left;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  background-color: #fff;
+  border: 0.075rem solid #ddd;
+  border-radius: 0.25rem;
+  box-shadow: inset 0 0.2rem 0.4rem rgb(0 0 0 / 5%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.header .file-custom:before {
+  position: absolute;
+  top: -0.075rem;
+  right: -0.075rem;
+  bottom: -0.075rem;
+  z-index: 6;
+  display: block;
+  content: "Browse";
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  background-color: #eee;
+  border: 0.075rem solid #ddd;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+.header .file-custom:after {
+  content: "Choose file...";
+}
+.header input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.header button {
+  background-color: #333;
+  border: none;
   color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.gallery {
+  margin: 0 auto;
+  max-width: 1280px;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+  padding: 0 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.gallery .pics {
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+  cursor: pointer;
+  margin-bottom: 12px;
+  display: block;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.gallery .pics img {
+  width: 100%;
+}
+
+.gallery .pics p {
+  padding: 20px;
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+.gallery .pics small {
+  padding: 5px;
+  margin: 0;
+  color: #555;
+  margin-left: 5px;
+}
+
+@media (max-width: 991px) {
+  .gallery {
+    margin: 0;
+    max-width: none;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    margin: 0;
+    max-width: none;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
   }
+}
+.btn-delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 80px;
+    border-radius: 24px;
+    cursor: pointer;
+    background-color: white;
+    color: red;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.pics .pics-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
