@@ -64,7 +64,7 @@ function App() {
           const id = `${val.id}`;
           return (
             <div className='pics' key={val.id}>
-              <img src={val.url} style={{ width: '100%' }}/>
+              <img src={val.img} style={{ width: '100%' }}/>
               <p>{val.legend}</p>
               <div className='pics-bottom'>
                 <small>{val.date}</small>

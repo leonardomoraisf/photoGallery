@@ -1,4 +1,4 @@
-# LubusStore
+# photoGallery
 ## About this Project
 
 The idea of the project is:
