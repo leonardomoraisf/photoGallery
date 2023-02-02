@@ -18,6 +18,7 @@ function App() {
     const ApiBase = 'http://127.0.0.1/photoGalleryServer/api/v1';
     axios.get(ApiBase+'/photos')
     .then((res)=>{
+        setList([]);
         setList(res.data);
     })
   }
@@ -39,9 +40,7 @@ function App() {
 
     const ApiBase = 'http://127.0.0.1/photoGalleryServer/api/v1';
     axios.delete(ApiBase+'/photo/'+id+'/delete')
-    .then(res => console.log('Deleted!!!', res),requestList()).catch(err => console.log(err))
-
-    requestList();
+    .then(res => requestList()).catch(err => console.log(err))
   }
 
   return (
